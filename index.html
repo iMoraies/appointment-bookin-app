@@ -3,16 +3,94 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Appointment Booking</title>
+  <meta name="description" content="Simple appointment booking application" />
+
+  <title>Appointment Booking App</title>
 
   <link rel="stylesheet" href="./css/styles.css" />
   <script src="./js/app.js" defer></script>
 </head>
 
 <body>
-  <main>
+
+  <header class="app-header">
     <h1>Appointment Booking</h1>
-    <p>Book your service quickly and easily.</p>
+    <p class="app-subtitle">
+      Book your service quickly and easily
+    </p>
+  </header>
+
+  <main class="app-container">
+
+    <section class="section services" aria-labelledby="services-title">
+      <h2 id="services-title">Select a service</h2>
+
+      <ul class="service-list">
+        <li>
+          <button class="service-button" data-service="Consultation">
+            Consultation
+          </button>
+        </li>
+        <li>
+          <button class="service-button" data-service="Maintenance">
+            Maintenance
+          </button>
+        </li>
+        <li>
+          <button class="service-button" data-service="Installation">
+            Installation
+          </button>
+        </li>
+      </ul>
+    </section>
+
+    <section class="section schedule" aria-labelledby="schedule-title">
+      <h2 id="schedule-title">Choose date and time</h2>
+
+      <label>
+        Date
+        <input type="date" id="dateInput" />
+      </label>
+
+      <div class="time-slots" id="timeSlots">
+      </div>
+    </section>
+
+    <section class="section client" aria-labelledby="client-title">
+      <h2 id="client-title">Your information</h2>
+
+      <form id="bookingForm">
+        <label>
+          Full name
+          <input type="text" id="clientName" required />
+        </label>
+
+        <label>
+          Email
+          <input type="email" id="clientEmail" required />
+        </label>
+
+        <button type="submit">
+          Confirm appointment
+        </button>
+      </form>
+    </section>
+
+    <section class="section summary" aria-labelledby="summary-title">
+      <h2 id="summary-title">Booking summary</h2>
+
+      <p id="summaryText">
+        No appointment selected yet.
+      </p>
+    </section>
+
   </main>
+
+  <footer class="app-footer">
+    <p>
+      Built with HTML, CSS and JavaScript
+    </p>
+  </footer>
+
 </body>
 </html>
