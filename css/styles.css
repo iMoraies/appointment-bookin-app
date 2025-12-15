@@ -174,3 +174,10 @@ body {
   font-size: 0.9rem;
   color: var(--muted-text);
 }
+
+.selected-service,
+.selected-time {
+  background-color: var(--primary-color);
+  color: white;
+  border-color: var(--primary-color);
+}
